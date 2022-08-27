@@ -32,6 +32,8 @@ ul {
   --link-footer-color: rgba(255, 255, 255, 0.6);
   --button-hero-active: #188ce8;
   --card-set-gap: 30px;
+  --bkgrd-link-color: #afb1b8;
+  --bkgrd-link-sec-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -128,6 +130,10 @@ img {
 
   padding-top: 32px;
   padding-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link-contacts:hover,
@@ -146,28 +152,18 @@ img {
   margin-left: 50px;
 }
 
-.icon-email::before {
-  display: inline-block;
-  content: "";
+.icon-email {
   width: 16px;
-  background-image: url("../images/icons/envelope.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 12px;
   margin-right: 10px;
-  padding-top: 34px;
-  padding-bottom: 34px;
+  fill: currentColor;
 }
 
-.icon-telephone::before {
-  display: inline-block;
-  content: "";
+.icon-telephone {
   width: 16px;
-  background-image: url("../images/icons/smartphone.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 12px;
   margin-right: 10px;
-  padding-top: 34px;
-  padding-bottom: 34px;
+  fill: currentColor;
 }
 
 .main-nav {
@@ -242,35 +238,20 @@ img {
   color: var(--second-text-color);
 }
 
-.advantades-li {
-  width: 270px;
-}
-
-.advantades-li::before {
-  content: "";
-  display: block;
+.icon-advantages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 120px;
+  width: 270px;
   background-color: var(--third-bkgrd-color);
-  background-repeat: no-repeat;
-  background-position: center;
   margin-bottom: 30px;
   border-radius: 4px;
 }
 
-.icon-antenna::before {
-  background-image: url("../images/icons/antenna.svg");
-}
-
-.icon-clock::before {
-  background-image: url("../images/icons/clock.svg");
-}
-
-.icon-diagram::before {
-  background-image: url("../images/icons/diagram.svg");
-}
-
-.icon-astronaut::before {
-  background-image: url("../images/icons/astronaut.svg");
+.icon-item {
+  width: 70px;
+  height: 70px;
 }
 
 .advantades-li:not(:last-child) {
@@ -323,10 +304,12 @@ img {
   line-height: 1.19;
   text-align: center;
   color: var(--second-text-color);
+
+  margin-bottom: 16px;
 }
 
 .member-block {
-  padding: 30px;
+  padding: 30px 32px;
 }
 
 .member-card {
@@ -339,6 +322,40 @@ img {
 
 .member-card:last-child {
   margin-right: 0;
+}
+
+.connect-block {
+  display: inline-flex;
+}
+
+.social-block-item + .social-block-item {
+  margin-left: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--bkgrd-link-color);
+}
+
+.social-block-link:hover,
+.social-block-link:focus {
+  background-color: var(--logo-color);
+}
+
+.social-block-link:hover .icon,
+.social-block-link:focus .icon {
+  fill: var(--main-bkgrd-color);
+}
+
+.social-block-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-bkgrd-color);
 }
 
 /* Секція footer */
@@ -386,6 +403,35 @@ img {
   margin-top: 20px;
 }
 
+.footer-list {
+  display: flex;
+  align-items: baseline;
+}
+.connect {
+  margin-left: 70px;
+}
+
+.connect-text {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--main-bkgrd-color);
+
+  margin-bottom: 20px;
+}
+
+.connect .social-block-link {
+  background-color: var(--bkgrd-link-sec-color);
+}
+
+.connect .icon {
+  fill: var(--main-bkgrd-color);
+}
+
+.connect .social-block-link:focus,
+.connect .social-block-link:hover {
+  background-color: var(--logo-color);
+}
 /* розмітка portfolio.html */
 /* кнопки */
 .buttons-primary {
