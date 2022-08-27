@@ -153,15 +153,11 @@ img {
 }
 
 .icon-email {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
   fill: currentColor;
 }
 
 .icon-telephone {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -249,11 +245,6 @@ img {
   border-radius: 4px;
 }
 
-.icon-item {
-  width: 70px;
-  height: 70px;
-}
-
 .advantades-li:not(:last-child) {
   margin-right: 30px;
 }
@@ -333,8 +324,6 @@ img {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
   fill: var(--bkgrd-link-color);
 }
 
@@ -431,6 +420,39 @@ img {
 .connect .social-block-link:focus,
 .connect .social-block-link:hover {
   background-color: var(--logo-color);
+}
+
+/* Секція Постійні клієнти */
+.clients {
+  display: flex;
+}
+
+.clients-block {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-block:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  fill: var(--bkgrd-link-color);
+}
+
+.clients-block:hover,
+.clients-block:focus {
+  border-color: var(--logo-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--button-hero-active);
 }
 /* розмітка portfolio.html */
 /* кнопки */
